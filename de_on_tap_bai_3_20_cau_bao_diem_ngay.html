@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đề ôn tập Bài 3 - Phần mềm chạy trên Internet</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef5ff;margin:0;padding:20px;color:#172033}
+.container{max-width:800px;margin:auto;background:white;padding:24px;border-radius:16px;box-shadow:0 4px 18px #0002}
+h1{text-align:center;color:#185abc;font-size:25px}
+.subtitle{text-align:center;color:#555;margin-bottom:25px}
+.question{padding:18px 0;border-bottom:1px solid #ddd}
+.question b{display:block;margin-bottom:10px}
+label{display:block;padding:8px;border-radius:8px;cursor:pointer}
+label:hover{background:#f0f6ff}
+button{margin-top:24px;width:100%;padding:14px;border:0;border-radius:10px;background:#185abc;color:white;font-size:17px;font-weight:bold;cursor:pointer}
+button:hover{background:#0d47a1}
+#result{display:none;margin-top:20px;padding:18px;background:#e8f5e9;border-radius:10px;text-align:center;font-size:18px;font-weight:bold}
+.correct{background:#d8f5dc!important}.wrong{background:#ffe0e0!important}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📝 ĐỀ ÔN TẬP BÀI 3</h1>
+<div class="subtitle">Phần mềm chạy trên Internet — 20 câu trắc nghiệm</div>
+<form id="quiz">
+
+<div class="question"><b>1. Đặc điểm nào sau đây đúng với phần mềm chạy trên Internet?</b>
+<label><input type="radio" name="q1" value="A" onchange="answerQuestion(1, this)"> A. Chỉ sử dụng được trên máy tính để bàn</label>
+<label><input type="radio" name="q1" value="B" onchange="answerQuestion(1, this)"> B. Bắt buộc phải cài đặt trực tiếp lên máy tính</label>
+<label><input type="radio" name="q1" value="C" onchange="answerQuestion(1, this)"> C. Có thể sử dụng qua Internet mà không cần cài đặt trực tiếp</label>
+<label><input type="radio" name="q1" value="D" onchange="answerQuestion(1, this)"> D. Không cần kết nối Internet khi sử dụng</label></div>
+
+<div class="question"><b>2. Dữ liệu của phần mềm chạy trên Internet thường được lưu trữ ở đâu?</b>
+<label><input type="radio" name="q2" value="A" onchange="answerQuestion(2, this)"> A. Chỉ trên USB</label>
+<label><input type="radio" name="q2" value="B" onchange="answerQuestion(2, this)"> B. Trên máy chủ</label>
+<label><input type="radio" name="q2" value="C" onchange="answerQuestion(2, this)"> C. Chỉ trên ổ cứng máy tính cá nhân</label>
+<label><input type="radio" name="q2" value="D" onchange="answerQuestion(2, this)"> D. Trong bộ nhớ RAM</label></div>
+
+<div class="question"><b>3. Đâu là một ưu điểm của phần mềm chạy trên Internet?</b>
+<label><input type="radio" name="q3" value="A" onchange="answerQuestion(3, this)"> A. Luôn hoạt động khi không có Internet</label>
+<label><input type="radio" name="q3" value="B" onchange="answerQuestion(3, this)"> B. Không bao giờ cần tài khoản</label>
+<label><input type="radio" name="q3" value="C" onchange="answerQuestion(3, this)"> C. Có thể truy cập mọi lúc, mọi nơi khi có Internet</label>
+<label><input type="radio" name="q3" value="D" onchange="answerQuestion(3, this)"> D. Không cần thiết bị kết nối mạng</label></div>
+
+<div class="question"><b>4. Theo nội dung bài học, phần mềm chạy trên Internet có thể được sử dụng trên:</b>
+<label><input type="radio" name="q4" value="A" onchange="answerQuestion(4, this)"> A. Chỉ máy tính</label>
+<label><input type="radio" name="q4" value="B" onchange="answerQuestion(4, this)"> B. Chỉ điện thoại</label>
+<label><input type="radio" name="q4" value="C" onchange="answerQuestion(4, this)"> C. Máy tính, điện thoại và máy tính bảng</label>
+<label><input type="radio" name="q4" value="D" onchange="answerQuestion(4, this)"> D. Chỉ máy tính bảng</label></div>
+
+<div class="question"><b>5. Đâu là nhược điểm của phần mềm chạy trên Internet?</b>
+<label><input type="radio" name="q5" value="A" onchange="answerQuestion(5, this)"> A. Có thể sử dụng trên nhiều thiết bị</label>
+<label><input type="radio" name="q5" value="B" onchange="answerQuestion(5, this)"> B. Dễ dàng chia sẻ và làm việc nhóm</label>
+<label><input type="radio" name="q5" value="C" onchange="answerQuestion(5, this)"> C. Phụ thuộc vào kết nối Internet</label>
+<label><input type="radio" name="q5" value="D" onchange="answerQuestion(5, this)"> D. Thường được cập nhật tự động</label></div>
+
+<div class="question"><b>6. Nhiều người cùng làm việc trên một tài liệu theo thời gian thực là đặc điểm nào?</b>
+<label><input type="radio" name="q6" value="A" onchange="answerQuestion(6, this)"> A. Khả năng cộng tác</label>
+<label><input type="radio" name="q6" value="B" onchange="answerQuestion(6, this)"> B. Khả năng cài đặt ngoại tuyến</label>
+<label><input type="radio" name="q6" value="C" onchange="answerQuestion(6, this)"> C. Khả năng thay thế phần cứng</label>
+<label><input type="radio" name="q6" value="D" onchange="answerQuestion(6, this)"> D. Khả năng hoạt động không cần mạng</label></div>
+
+<div class="question"><b>7. Ứng dụng nào được sử dụng để soạn thảo văn bản?</b>
+<label><input type="radio" name="q7" value="A" onchange="answerQuestion(7, this)"> A. Google Sheets</label>
+<label><input type="radio" name="q7" value="B" onchange="answerQuestion(7, this)"> B. Google Docs</label>
+<label><input type="radio" name="q7" value="C" onchange="answerQuestion(7, this)"> C. Google Slides</label>
+<label><input type="radio" name="q7" value="D" onchange="answerQuestion(7, this)"> D. Google Drive</label></div>
+
+<div class="question"><b>8. Google Sheets chủ yếu được sử dụng để:</b>
+<label><input type="radio" name="q8" value="A" onchange="answerQuestion(8, this)"> A. Làm bảng tính</label>
+<label><input type="radio" name="q8" value="B" onchange="answerQuestion(8, this)"> B. Soạn thảo văn bản</label>
+<label><input type="radio" name="q8" value="C" onchange="answerQuestion(8, this)"> C. Tạo bài trình chiếu</label>
+<label><input type="radio" name="q8" value="D" onchange="answerQuestion(8, this)"> D. Gửi thư điện tử</label></div>
+
+<div class="question"><b>9. Google Slides chủ yếu dùng để:</b>
+<label><input type="radio" name="q9" value="A" onchange="answerQuestion(9, this)"> A. Lưu trữ dữ liệu</label>
+<label><input type="radio" name="q9" value="B" onchange="answerQuestion(9, this)"> B. Làm bảng tính</label>
+<label><input type="radio" name="q9" value="C" onchange="answerQuestion(9, this)"> C. Tạo bài trình chiếu</label>
+<label><input type="radio" name="q9" value="D" onchange="answerQuestion(9, this)"> D. Quản lí mật khẩu</label></div>
+
+<div class="question"><b>10. Công cụ nào được đề cập có chức năng lưu trữ và đồng bộ tài liệu?</b>
+<label><input type="radio" name="q10" value="A" onchange="answerQuestion(10, this)"> A. Gmail</label>
+<label><input type="radio" name="q10" value="B" onchange="answerQuestion(10, this)"> B. Google Drive</label>
+<label><input type="radio" name="q10" value="C" onchange="answerQuestion(10, this)"> C. Google Docs</label>
+<label><input type="radio" name="q10" value="D" onchange="answerQuestion(10, this)"> D. Canva</label></div>
+
+<div class="question"><b>11. Nhận định nào không phải là ưu điểm được nêu trong ảnh?</b>
+<label><input type="radio" name="q11" value="A" onchange="answerQuestion(11, this)"> A. Dễ dàng chia sẻ và làm việc nhóm</label>
+<label><input type="radio" name="q11" value="B" onchange="answerQuestion(11, this)"> B. Phần mềm thường được cập nhật tự động</label>
+<label><input type="radio" name="q11" value="C" onchange="answerQuestion(11, this)"> C. Không phụ thuộc vào Internet</label>
+<label><input type="radio" name="q11" value="D" onchange="answerQuestion(11, this)"> D. Không cần cài đặt phần mềm phức tạp</label></div>
+
+<div class="question"><b>12. Khi sử dụng phần mềm trực tuyến, người dùng cần chú ý đến vấn đề nào?</b>
+<label><input type="radio" name="q12" value="A" onchange="answerQuestion(12, this)"> A. Bảo mật tài khoản và dữ liệu cá nhân</label>
+<label><input type="radio" name="q12" value="B" onchange="answerQuestion(12, this)"> B. Chỉ sử dụng máy tính có ổ cứng lớn</label>
+<label><input type="radio" name="q12" value="C" onchange="answerQuestion(12, this)"> C. Không cần đặt mật khẩu</label>
+<label><input type="radio" name="q12" value="D" onchange="answerQuestion(12, this)"> D. Không cần cập nhật trình duyệt</label></div>
+
+<div class="question"><b>13. Một trong những nguy cơ khi sử dụng phần mềm trực tuyến là:</b>
+<label><input type="radio" name="q13" value="A" onchange="answerQuestion(13, this)"> A. Không thể chia sẻ dữ liệu</label>
+<label><input type="radio" name="q13" value="B" onchange="answerQuestion(13, this)"> B. Lừa đảo qua các trang web giả mạo</label>
+<label><input type="radio" name="q13" value="C" onchange="answerQuestion(13, this)"> C. Không thể sử dụng trên điện thoại</label>
+<label><input type="radio" name="q13" value="D" onchange="answerQuestion(13, this)"> D. Không thể lưu dữ liệu</label></div>
+
+<div class="question"><b>14. Biện pháp nào sau đây được đề cập để tăng cường bảo mật?</b>
+<label><input type="radio" name="q14" value="A" onchange="answerQuestion(14, this)"> A. Dùng một mật khẩu cho tất cả dịch vụ</label>
+<label><input type="radio" name="q14" value="B" onchange="answerQuestion(14, this)"> B. Tắt xác thực hai yếu tố</label>
+<label><input type="radio" name="q14" value="C" onchange="answerQuestion(14, this)"> C. Sử dụng mật khẩu mạnh và duy nhất cho từng dịch vụ</label>
+<label><input type="radio" name="q14" value="D" onchange="answerQuestion(14, this)"> D. Nhấp vào mọi liên kết nhận được</label></div>
+
+<div class="question"><b>15. Khi nhận được email, tin nhắn hoặc liên kết đáng ngờ, người dùng nên:</b>
+<label><input type="radio" name="q15" value="A" onchange="answerQuestion(15, this)"> A. Nhấp ngay vào liên kết để kiểm tra</label>
+<label><input type="radio" name="q15" value="B" onchange="answerQuestion(15, this)"> B. Kiểm tra kỹ địa chỉ URL trước khi truy cập</label>
+<label><input type="radio" name="q15" value="C" onchange="answerQuestion(15, this)"> C. Cung cấp mật khẩu để xác minh</label>
+<label><input type="radio" name="q15" value="D" onchange="answerQuestion(15, this)"> D. Chuyển tiếp cho nhiều người khác</label></div>
+
+<div class="question"><b>16. Theo bảng phân loại, nhóm Văn phòng và Cộng tác có thể bao gồm:</b>
+<label><input type="radio" name="q16" value="A" onchange="answerQuestion(16, this)"> A. Google Docs, Google Sheets, Google Slides</label>
+<label><input type="radio" name="q16" value="B" onchange="answerQuestion(16, this)"> B. Netflix, Spotify, TikTok</label>
+<label><input type="radio" name="q16" value="C" onchange="answerQuestion(16, this)"> C. Zoom, Slack, Gmail</label>
+<label><input type="radio" name="q16" value="D" onchange="answerQuestion(16, this)"> D. Canva, Figma, CapCut Web</label></div>
+
+<div class="question"><b>17. Nhóm Giao tiếp và Tương tác có những ví dụ nào?</b>
+<label><input type="radio" name="q17" value="A" onchange="answerQuestion(17, this)"> A. Canva, Figma, Photoshop</label>
+<label><input type="radio" name="q17" value="B" onchange="answerQuestion(17, this)"> B. Zoom, Google Meet, Microsoft Teams, Slack, Gmail</label>
+<label><input type="radio" name="q17" value="C" onchange="answerQuestion(17, this)"> C. Netflix, Spotify, YouTube</label>
+<label><input type="radio" name="q17" value="D" onchange="answerQuestion(17, this)"> D. Google Docs, Google Sheets, Google Slides</label></div>
+
+<div class="question"><b>18. Theo bảng so sánh, phần mềm chạy trên Internet khác phần mềm truyền thống ở điểm nào?</b>
+<label><input type="radio" name="q18" value="A" onchange="answerQuestion(18, this)"> A. Phần mềm trên Internet chủ yếu chạy trên máy chủ đám mây</label>
+<label><input type="radio" name="q18" value="B" onchange="answerQuestion(18, this)"> B. Phần mềm trên Internet luôn hoạt động khi mất mạng</label>
+<label><input type="radio" name="q18" value="C" onchange="answerQuestion(18, this)"> C. Phần mềm truyền thống bắt buộc phải có Internet</label>
+<label><input type="radio" name="q18" value="D" onchange="answerQuestion(18, this)"> D. Phần mềm truyền thống luôn được cập nhật tự động</label></div>
+
+<div class="question"><b>19. Theo bảng so sánh, phần mềm chạy trên Internet có yêu cầu kết nối như thế nào?</b>
+<label><input type="radio" name="q19" value="A" onchange="answerQuestion(19, this)"> A. Không cần Internet</label>
+<label><input type="radio" name="q19" value="B" onchange="answerQuestion(19, this)"> B. Chỉ cần Internet khi cài đặt</label>
+<label><input type="radio" name="q19" value="C" onchange="answerQuestion(19, this)"> C. Bắt buộc có Internet</label>
+<label><input type="radio" name="q19" value="D" onchange="answerQuestion(19, this)"> D. Chỉ cần Bluetooth</label></div>
+
+<div class="question"><b>20. Biện pháp nào được khuyến nghị để giảm thiểu rủi ro?</b>
+<label><input type="radio" name="q20" value="A" onchange="answerQuestion(20, this)"> A. Sử dụng Wi-Fi công cộng không bảo mật để truy cập dịch vụ nhạy cảm</label>
+<label><input type="radio" name="q20" value="B" onchange="answerQuestion(20, this)"> B. Tắt cập nhật trình duyệt và hệ điều hành</label>
+<label><input type="radio" name="q20" value="C" onchange="answerQuestion(20, this)"> C. Ưu tiên dịch vụ từ nhà cung cấp uy tín, có chính sách bảo mật rõ ràng</label>
+<label><input type="radio" name="q20" value="D" onchange="answerQuestion(20, this)"> D. Sử dụng cùng một mật khẩu cho nhiều tài khoản</label></div>
+
+<div id="result" style="display:block;background:#eef5ff">Điểm hiện tại: <strong>0/20</strong></div>
+</form>
+</div>
+<script>
+const answers={q1:"C",q2:"B",q3:"C",q4:"C",q5:"C",q6:"A",q7:"B",q8:"A",q9:"C",q10:"B",q11:"C",q12:"A",q13:"B",q14:"C",q15:"B",q16:"A",q17:"B",q18:"A",q19:"C",q20:"C"};
+let score=0;
+const done=new Set();
+function answerQuestion(i, input){
+  if(done.has(i)) return;
+  done.add(i);
+  const correct=answers[`q${i}`];
+  const labels=document.querySelectorAll(`input[name=q${i}]`);
+  labels.forEach(x=>{
+    x.disabled=true;
+    if(x.value===correct) x.parentElement.classList.add("correct");
+  });
+  const r=document.getElementById("result");
+  if(input.value===correct){
+    score++;
+    input.parentElement.classList.add("correct");
+  }else{
+    input.parentElement.classList.add("wrong");
+  }
+  r.innerHTML=`Điểm hiện tại: <strong>${score}/${done.size}</strong> câu đúng — tương đương <strong>${(score/done.size*10).toFixed(1)}/10</strong><br><small>Đã làm ${done.size}/20 câu</small>`;
+  if(done.size===20){
+    r.innerHTML=`🎉 Hoàn thành! Bạn đúng <strong>${score}/20</strong> câu — <strong>${(score*0.5).toFixed(1)}/10 điểm</strong>.`;
+  }
+}
+</script>
+</body>
+</html>
